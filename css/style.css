@@ -1,0 +1,43 @@
+/* Video inside of Text CSS effect by D. 'Coder' Wilson */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* Basic layout */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Controls for main content */
+.main_content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Controls video and dependent h2 tag */
+video, h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlays h2 tag on video. Feel free to try other color combinations */
+h2 {
+  background: #ccc;
+  font-size: 30vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #FF0000;
+  /* Text shadow doesn't work in IE */
+  color: #000;
+  line-height: 100vh;
+  mix-blend-mode: overlay;  /* Change this value for other setting options */
+}
